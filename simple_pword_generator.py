@@ -26,6 +26,8 @@ def pword_gen():
         pword += pword_symbols_list[randbelow(94)]
         
     print(f"Your new password is:\n{pword}")
+    if input("Do you want this copying to your clipboard? Press y for yes.").lower() == "y":
+        pyperclip.copy(pword)
     print("Keep it safe!")
 
 
